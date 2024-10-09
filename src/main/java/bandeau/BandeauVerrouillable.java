@@ -1,6 +1,5 @@
 package bandeau;
 
-import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BandeauVerrouillable extends Bandeau {

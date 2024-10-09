@@ -1,7 +1,5 @@
 package bandeau;
 import java.util.List;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.LinkedList;
 
@@ -49,7 +47,7 @@ public class Scenario {
     public void playOn(BandeauVerrouillable b) {
         Thread t = new Thread() {
             public void run() {
-                lockScenario.readLock().lock();;
+                lockScenario.readLock().lock();
                 b.lock();
                 for (ScenarioElement element : myElements) {
                     for (int repeats = 0; repeats < element.repeats; repeats++) {
